@@ -1,0 +1,955 @@
+/* ESTILOS GERAIS*/
+
+body {
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+    color: #334155;     
+    background: #ffffff;
+    margin: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Poppins', sans-serif;
+    color: #0f172a;     
+    font-weight: 700;
+    margin-top: 0;
+}
+
+/*HERO HEADER*/
+
+.hero-header {
+    position: relative;
+    height: 100vh;
+    background-image: url("universidade.png");
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    overflow: hidden;
+}
+
+
+.overlay {
+    position: absolute;
+    inset: 0;
+    background:
+        linear-gradient(rgba(15,23,42,.72),rgba(15,23,42,.72)),
+        linear-gradient(135deg,rgba(15,23,42,.55),rgba(30,41,59,.45));
+    pointer-events: none;
+}
+
+/* NAVBAR*/
+
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 8%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 10;
+    background: rgba(15, 23, 42, 0.95); 
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.logo img {
+    width: 70px;
+}
+
+.logo-text h2 {
+    color: #ffffff;
+    font-size: 24px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    margin: 0;
+}
+
+.logo-text span {
+    font-family: 'Poppins', sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+    color: #fbbf24;      
+    letter-spacing: 4px;
+    display: block;
+}
+
+/* Menu de navegação */
+.nav-list {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    gap: 24px;
+}
+
+.nav-list li a {
+    font-family: 'Inter', sans-serif;
+    color: #e2e8f0;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 500;
+    transition: 0.3s ease;
+}
+
+.nav-list li a:hover {
+    color: #059669;     
+}
+
+.menu-toggle {
+    display: none;
+    font-size: 30px;
+    cursor: pointer;
+    color: #ffffff;
+    background: none;
+    border: none;
+    padding: 0;
+}
+
+/*=============================
+        HERO CONTENT
+=============================*/
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 750px;
+    margin-left: 8%;
+    margin-top: 80px;
+}
+
+.hero-content h1 {
+    color: #ffffff;
+    font-size: 56px;
+    line-height: 1.15;
+    margin-bottom: 25px;
+    letter-spacing: -1px;
+}
+
+.hero-content p {
+    color:#f1f5f9;
+    font-size:19px;
+    line-height:1.8;
+    margin-bottom:40px;
+    text-shadow:0 2px 8px rgba(0,0,0,.35);
+}
+
+/*=============================
+          BOTÕES
+=============================*/
+
+.hero-buttons {
+    display: flex;
+    gap: 20px;
+}
+
+.btn-primary {
+    font-family: 'Inter', sans-serif;
+    background: #059669; 
+    color: #ffffff;
+    padding: 16px 35px;
+    border-radius: 50px;
+    text-decoration: none;
+    transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    font-weight: 600;
+    font-size: 15px;
+    border: none;
+    cursor: pointer;
+    display: inline-block;
+    box-shadow: 0 4px 14px rgba(5, 150, 105, 0.3);
+}
+
+.btn-primary:hover {
+    background: #047857;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(5, 150, 105, 0.4);
+}
+
+.btn-secondary {
+    font-family: 'Inter', sans-serif;
+    border: 2px solid #ffffff;
+    color: #ffffff;
+    padding: 16px 35px;
+    border-radius: 50px;
+    text-decoration: none;
+    transition: 0.3s ease;
+    font-weight: 600;
+    font-size: 15px;
+    background: transparent;
+    cursor: pointer;
+    display: inline-block;
+}
+
+.btn-secondary:hover {
+    background: #ffffff;
+    color: #0f172a;     
+}
+
+/*=============================
+        SECÇÕES GERAIS
+=============================*/
+
+section {
+    padding: 40px;
+    margin: 40px 8%;
+    background: #f8fafc;
+    border-radius: 12px;
+    border: 1px solid #f1f5f9;
+}
+
+section h2 {
+    font-size: 32px;
+    color: #0f172a;
+    margin-bottom: 20px;
+    position: relative;
+    padding-bottom: 12px;
+}
+
+section h2::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 60px;
+    height: 4px;
+    background: linear-gradient(to right, #059669, #fbbf24);
+    border-radius: 2px;
+}
+
+section p {
+    font-size: 16px;
+    line-height: 1.8;
+    color: #475569;
+}
+
+section ul {
+    padding-left: 20px;
+}
+
+section li {
+    margin-bottom: 10px;
+    color: #475569;
+}
+
+/*=============================
+        HERO SECTION (Boas-vindas)
+=============================*/
+
+.hero {
+    background: linear-gradient(135deg, #0f172a, #1e293b); /* Gradiente executivo profundo */
+    color: #ffffff;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.hero h2 {
+    color: #ffffff;
+    font-size: 36px;
+    margin-bottom: 12px;
+}
+
+.hero p {
+    font-size: 18px;
+    color: #94a3b8;
+}
+
+/*=============================
+        LAYOUT DOS CURSOS
+=============================*/
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 16px;
+    margin-top: 25px;
+}
+
+.card {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+    color: #1e293b;
+    border: 1px solid #e2e8f0;
+    padding: 24px;
+    border-radius: 8px;
+    background: #ffffff;
+    text-align: center;
+    cursor: pointer;
+    transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.curso:hover {
+    background: #059669;
+    color: #ffffff;
+    border-color: #059669;
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(5, 150, 105, 0.25);
+}
+
+/*=============================
+        GALERIA REESTILIZADA
+=============================*/
+
+.gallery-section {
+    padding: 40px;
+    margin: 40px 8%;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 28px;
+    margin-top: 30px;
+}
+
+.gallery-item {
+    background: #ffffff;
+    border-radius: 14px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(15, 23, 42, 0.04);
+    border: 1px solid #e2e8f0;
+    cursor: pointer;
+    transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s ease;
+}
+
+/* Contentor da imagem para isolar e fazer o efeito de escala (Zoom) */
+.gallery-img-container {
+    width: 100%;
+    height: 240px;
+    overflow: hidden; /* Corta a imagem quando ela expande */
+    background: #0f172a;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1), filter 0.4s ease;
+}
+
+/* === ANIMAÇÕES DE HOVER (PASSAR O RATO) === */
+.gallery-item:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 20px 25px -5px rgba(15, 23, 42, 0.1), 0 10px 10px -5px rgba(15, 23, 42, 0.04);
+}
+
+/* Faz a imagem crescer suavemente lá dentro */
+.gallery-item:hover img {
+    transform: scale(1.08);
+    filter: brightness(1.05);
+}
+
+.gallery-content {
+    padding: 22px;
+    background: #ffffff;
+}
+
+.gallery-content h3 {
+    font-size: 18px;
+    color: #0f172a;
+    margin-bottom: 8px;
+    transition: color 0.3s ease;
+}
+
+.gallery-item:hover .gallery-content h3 {
+    color: #059669; /* Destaca o título com a cor institucional esmeralda */
+}
+
+.gallery-content p {
+    font-size: 14px;
+    line-height: 1.6;
+    color: #64748b;
+    margin: 0;
+}
+
+/*=============================
+     ESTILOS DA LIGHTBOX (NOVO)
+=============================*/
+
+.lightbox {
+    display: none;
+    position: fixed;
+    z-index: 2000; /* Fica acima da navbar e das modais comuns */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(15, 23, 42, 0.9); /* Fundo escuro premium */
+    backdrop-filter: blur(8px); /* Efeito de desfoque de fundo */
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    animation: fadeInLightbox 0.3s ease;
+}
+
+.lightbox-img {
+    max-width: 85%;
+    max-height: 75vh;
+    border-radius: 8px;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+    transform: scale(0.95);
+    animation: zoomInLightbox 0.35s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.lightbox-caption {
+    font-family: 'Poppins', sans-serif;
+    color: #ffffff;
+    font-size: 18px;
+    font-weight: 500;
+    margin-top: 15px;
+    letter-spacing: 0.5px;
+    text-align: center;
+}
+
+.fechar-lightbox {
+    position: absolute;
+    top: 25px;
+    right: 35px;
+    color: #cbd5e1;
+    font-size: 40px;
+    font-weight: 300;
+    cursor: pointer;
+    transition: color 0.2s, transform 0.2s;
+}
+
+.fechar-lightbox:hover {
+    color: #ffffff;
+    transform: scale(1.1);
+}
+
+/* Animações de transição */
+@keyframes fadeInLightbox {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes zoomInLightbox {
+    from { transform: scale(0.92); }
+    to { transform: scale(1); }
+}
+/*=============================
+        JANELAS MODAIS
+=============================*/
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(15, 23, 42, 0.7); /* Sombra em azul escuro */
+    backdrop-filter: blur(5px);
+}
+
+.modal-content {
+    background: #ffffff;
+    width: 85%;
+    max-width: 650px;
+    margin: 8% auto;
+    padding: 35px;
+    border-radius: 16px;
+    max-height: 80vh;
+    overflow-y: auto;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.3);
+    animation: aparecer 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    border: 1px solid #e2e8f0;
+}
+
+.modal-content h2, .modal-content h3 {
+    color: #0f172a;
+    border-bottom: 2px solid #f1f5f9;
+    padding-bottom: 8px;
+}
+
+.modal-content strong {
+    color: #0f172a; /* Destaca rótulos como Custo:, Programa: */
+}
+
+.fechar {
+    float: right;
+    font-size: 28px;
+    font-weight: 400;
+    cursor: pointer;
+    color: #94a3b8;
+    transition: 0.2s;
+    line-height: 1;
+}
+
+.fechar:hover {
+    color: #ef4444; /* Destaque vermelho ao fechar */
+}
+
+@keyframes aparecer {
+    from {
+        opacity: 0;
+        transform: translateY(-30px) scale(0.98);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+/*=============================
+     CONTACTOS E FORMULÁRIO
+=============================*/
+
+.contacto-section {
+    padding: 40px;
+    margin: 40px 8%;
+}
+
+.contacto-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    margin-top: 30px;
+}
+
+/* Coluna de Informações (Esquerda) */
+.contacto-info {
+    flex: 1;
+    min-width: 280px;
+}
+
+.contacto-info h3 {
+    font-size: 22px;
+    margin-bottom: 15px;
+    color: #0f172a;
+}
+
+.contacto-info p {
+    color: #64748b;
+    margin-bottom: 30px;
+    font-size: 15px;
+}
+
+.info-items {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.info-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    background: #ffffff;
+    padding: 16px;
+    border-radius: 8px;
+    border: 1px solid #e2e8f0;
+    transition: transform 0.3s ease;
+}
+
+.info-item:hover {
+    transform: translateX(5px);
+}
+
+.info-icon {
+    font-size: 24px;
+    background: #f1f5f9;
+    padding: 10px;
+    border-radius: 50%;
+    width: 45px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.info-text {
+    display: flex;
+    flex-direction: column;
+}
+
+.info-text strong {
+    color: #0f172a;
+    font-size: 14px;
+}
+
+.info-text span a {
+    color: #059669;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+/* Caixa do Formulário (Direita) */
+.contacto-form-wrapper {
+    flex: 1.2;
+    min-width: 300px;
+    background: #ffffff;
+    padding: 35px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(15, 23, 42, 0.03);
+    border: 1px solid #e2e8f0;
+}
+
+.contacto-form-wrapper h3 {
+    font-size: 22px;
+    margin-bottom: 25px;
+    color: #0f172a;
+}
+
+/* Efeito Moderno de Floating Labels (Rótulos Flutuantes) */
+.input-group {
+    position: relative;
+    margin-bottom: 22px;
+}
+
+.form-moderno input,
+.form-moderno textarea {
+    font-family: 'Inter', sans-serif;
+    font-size: 15px;
+    width: 100%;
+    padding: 14px;
+    box-sizing: border-box;
+    border: 1px solid #cbd5e1;
+    border-radius: 8px;
+    background: #f8fafc;
+    color: #334155;
+    transition: all 0.3s ease;
+}
+
+/* Estilização especial para a etiqueta (Label) que flutua */
+.input-group label {
+    position: absolute;
+    left: 14px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-family: 'Inter', sans-serif;
+    font-size: 15px;
+    color: #94a3b8;
+    pointer-events: none;
+    transition: all 0.3s ease;
+    background: transparent;
+}
+
+/* Reposiciona a label para a text area */
+.input-group textarea ~ label {
+    top: 22px;
+}
+
+/* Quando o campo ganha foco ou tem texto válido, a label "sobe e encolhe" */
+.form-moderno input:focus ~ label,
+.form-moderno input:not(:placeholder-shown) ~ label,
+.form-moderno textarea:focus ~ label,
+.form-moderno textarea:not(:placeholder-shown) ~ label {
+    top: 0;
+    font-size: 12px;
+    font-weight: 600;
+    color: #059669;
+    padding: 0 6px;
+    background: #ffffff;
+    transform: translateY(-50%);
+}
+
+
+.form-moderno input:focus,
+.form-moderno textarea:focus {
+    outline: none;
+    border-color: #059669;
+    background: #ffffff;
+    box-shadow: 0 0 0 4px rgba(5, 150, 105, 0.1);
+}
+
+
+.btn-enviar {
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    font-size: 15px;
+    width: 100%;
+    padding: 14px;
+    background: #059669;
+    color: #ffffff;
+    border: none;
+    cursor: pointer;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 12px rgba(5, 150, 105, 0.2);
+}
+
+.btn-enviar:hover {
+    background: #047857;
+    box-shadow: 0 6px 18px rgba(5, 150, 105, 0.3);
+}
+
+.btn-icon {
+    transition: transform 0.3s ease;
+}
+
+.btn-enviar:hover .btn-icon {
+    transform: translateX(4px); 
+}
+
+
+@media (max-width: 900px) {
+    .contacto-container {
+        flex-direction: column;
+        gap: 30px;
+    }
+    
+    .contacto-info, .contacto-form-wrapper {
+        width: 100%;
+        min-width: 0;
+    }
+    
+    .contacto-form-wrapper {
+        padding: 25px; 
+    }
+}
+/*RODAPÉ*/
+
+footer {
+    background: #0f172a; 
+    color: #94a3b8;
+    text-align: center;
+    padding: 30px 20px;
+    margin-top: 40px;
+    font-size: 14px;
+    border-top: 4px solid #fbbf24; 
+}
+
+footer p {
+    margin: 6px 0;
+}
+
+footer p:first-child {
+    color: #ffffff;
+    font-weight: 500;
+}
+
+/* MOBILE*/
+
+@media (max-width: 768px) {
+    section {
+        margin: 20px 4%;
+        padding: 24px;
+    }
+
+    .navbar {
+        padding: 12px 4%;
+        box-sizing: border-box;
+      
+    }
+
+    .logo {
+        flex: 1;
+        min-width: 0;
+    }
+
+    .logo-text h2 {
+        font-size: 18px;
+    }
+
+    .menu-toggle {
+        display: block;
+        order: 3;
+        flex-shrink: 0; 
+        margin-left: 10px;
+    }
+
+    .dark-mode-btn {
+        order: 2;
+        margin-left: 10px;
+        flex-shrink: 0;
+    }
+
+    .nav-list {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        flex-direction: column;
+        background: rgba(15, 23, 42, 0.98);
+        text-align: center;
+        padding: 20px 0;
+        gap: 0;
+        border-bottom: 2px solid #059669;
+        z-index: 9;
+    }
+
+    .nav-list.active {
+        display: flex;
+    }
+
+    .nav-list li {
+        padding: 14px 0;
+    }
+
+    .hero-content h1 {
+        font-size: 40px;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .hero-content {
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+}
+
+@media (max-width: 480px) {
+    .logo img {
+        width: 50px;
+    }
+
+    .logo-text h2 {
+        font-size: 18px;
+    }
+
+    .hero-content h1 {
+        font-size: 32px;
+    }
+
+    .hero-content p {
+        font-size: 16px;
+    }
+
+    .btn-primary,
+    .btn-secondary {
+        padding: 14px 25px;
+        font-size: 14px;
+    }
+    
+    section h2 {
+        font-size: 26px;
+    }
+}
+/*1. SCROLL SUAVE E VARIÁVEIS DE COR (SUPORTE A MODO ESCURO)*/
+html {
+    scroll-behavior: smooth; 
+}
+
+/* Cores padrão (Modo Claro) */
+:root {
+    --bg-principal: #ffffff;
+    --bg-secundario: #f8fafc;
+    --bg-card: #ffffff;
+    --texto-principal: #0f172a;
+    --texto-secundario: #475569;
+    --borda: #e2e8f0;
+}
+
+/* Cores para o Modo Escuro */
+[data-theme="dark"] {
+    --bg-principal: #0f172a;   
+    --bg-secundario: #1e293b;   
+    --bg-card: #1e293b;         
+    --texto-principal: #f8fafc; 
+    --texto-secundario: #cbd5e1;
+    --borda: #334155;          
+}
+
+body {
+    background-color: var(--bg-principal);
+    color: var(--texto-secundario);
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: var(--texto-principal);
+}
+
+.hero-content h1{
+    color:#ffffff;
+    text-shadow:0 3px 10px rgba(0,0,0,.45),0 0 30px rgba(0,0,0,.25);
+}
+
+.hero h2{
+    color:#ffffff;
+    text-shadow:0 2px 8px rgba(0,0,0,.35);
+}
+
+.hero p{
+    color:#e2e8f0;
+}
+
+section {
+    background-color: var(--bg-secundario) !important;
+    border-color: var(--borda) !important;
+}
+
+.card, .gallery-item, .contacto-form-wrapper, .modal-content, .info-item {
+    background-color: var(--bg-card) !important;
+    border-color: var(--borda) !important;
+    color: var(--texto-secundario) !important;
+}
+
+form input, form textarea {
+    background-color: var(--bg-secundario) !important;
+    color: var(--texto-principal) !important;
+    border-color: var(--borda) !important;
+}
+
+/*2. ESTILO DOS BOTÕES (MODO ESCURO E VOLTAR AO TOPO)*/
+.dark-mode-btn {
+    background: none;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+    padding: 8px;
+    transition: transform 0.2s ease;
+    z-index: 15;
+}
+.dark-mode-btn:hover {
+    transform: scale(1.15);
+}
+
+.btn-topo {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 45px;
+    height: 45px;
+    background-color: #059669;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 999;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+}
+.btn-topo:hover {
+    background-color: #047857;
+    transform: translateY(-4px);
+}
+
+/* 3. ANIMAÇÕES AO APARECER (SCROLL REVEAL)*/
+.scroll-anima {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+/* Classe ativada via JavaScript quando a secção entra no ecrã */
+.scroll-anima.visivel {
+    opacity: 1;
+    transform: translateY(0);
+}
+
