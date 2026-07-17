@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ramanunjan Academy</title>
+ <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+<link rel="stylesheet"  href="vilembe_corrigido.css">
+<!-- 1. MathJax para fórmulas matemáticas-->
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+
+<body>
+<header class="hero-header">
+    <div class="overlay"></div>
+
+    <!-- Modifique a sua Navbar para incluir o botão de Modo Escuro -->
+<nav class="navbar">
+    <div class="logo">
+        <img src="logo.png" alt="Ramanunjan Academy">
+        <div class="logo-text">
+            <h2>RAMANUNJAN</h2>
+            <span>ACADEMY</span>
+        </div>
+    </div>
+    
+    <ul class="nav-list">
+        <li><a href="#sobre">Sobre</a></li>
+        <li><a href="#cursos">Cursos</a></li>
+        <li><a href="#galeria">Galeria</a></li>
+        <li><a href="#estudante">Estudante</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+    </ul>
+
+    <!-- NOVO: Botão Modo Escuro -->
+    <button id="dark-mode-toggle" class="dark-mode-btn" aria-label="Alternar modo escuro">🌙</button>
+
+    <div class="menu-toggle" id="menu-toggle">
+     ☰
+    </div>
+</nav>
+
+    <div class="hero-content">
+
+        <h1>
+            Transformando conhecimento
+            <br>
+            em oportunidades.
+        </h1>
+
+        <p>
+
+            A Ramanunjan Academy promove excelência académica,
+            investigação científica e inovação para formar
+            profissionais preparados para os desafios do futuro.
+
+        </p>
+
+        <div class="hero-buttons">
+
+            <a href="#cursos" class="btn-primary">
+
+                Conheça os Cursos
+
+            </a>
+
+            <a href="#contacto" class="btn-secondary">
+
+                Contactar
+
+            </a>
+
+        </div>
+
+    </div>
+
+</header>
+
+<!-- 3. secções de Conteúdo e exemplos de Latex -->
+<div class="hero">
+    <h2>Bem-vindo ao futuro da educação</h2>
+    <p>Formamos líderes preparados para o mundo moderno</p>
+</div>
+
+<section id="sobre" class="scroll-anima">
+    <h2>Sobre Nós</h2>
+     <p>A <strong>Ramanunjan Academy</strong> foi fundada em 2026 pelo empresário e professor <strong>João Gravino</strong>, com a missão de promover educação de excelência, inovação e desenvolvimento científico. O nome da instituição é uma homenagem ao génio matemático <strong>Srinivasa Ramanujan</strong>, reconhecido pelas suas extraordinárias contribuições para a teoria dos números, séries infinitas e frações contínuas.</p><p>
+Uma das contribuições mais famosas de Srinivasa Ramanujan foi a descoberta de séries infinitas extraordinariamente eficientes para o cálculo de π:
+</p>
+
+\[
+\frac{1}{\pi}
+=
+\frac{2\sqrt{2}}{9801}
+\sum_{k=0}^{\infty}
+\frac{(4k)!\,(1103+26390k)}
+{(k!)^4\,396^{4k}}
+\]
+
+<p>
+Esta fórmula demonstra a profundidade do génio matemático de Ramanujan e continua a ser estudada por matemáticos em todo o mundo.
+</p>
+</section>
+<section>
+    <h3>Missão</h3>
+    <p>Promover educação de qualidade, investigação científica e inovação,
+        formando profissionais competentes e cidadãos responsáveis.</p>
+    
+    <h3>Visão</h3>
+    <p>Ser uma referência nacional e internacional em ensino, investigação e
+        desenvolvimento humano.</p>
+    
+    <h3>Valores</h3>
+    <ul>
+        <li>Excelência académica</li>
+        <li>Ética e integridade</li>
+        <li>Inovação</li>
+        <li>Responsabilidade social</li>
+        <li>Inclusão</li>
+        <li>Compromisso com a ciência</li>
+    </ul>
+   
+</section>
+<!-- 4. secção dos cursos e a permissão da abertura da janela modal dos memos cursos -->
+<section id="cursos" class="scroll-anima">
+    <h2>Cursos Disponíveis</h2>
+
+    <div class="grid">
+        <div class="card curso" onclick="abrirCurso('matematica')">
+            Matemática
+        </div>
+        <div class="card curso" onclick="abrirCurso('informatica')">
+            Informática
+        </div>
+        <div class="card curso" onclick="abrirCurso('gestao')">
+            Gestão de Empresas
+        </div>
+        <div class="card curso" onclick="abrirCurso('educacao')">
+            Educação
+        </div>
+
+    </div>
+</section>
+<!-- 5. secção das imagens-->
+<section id="galeria" class="gallery-section">
+    <div class="container">
+        <div class="section-header">
+            <h2>Galeria</h2>
+            <p>Conheça alguns dos espaços e atividades da Ramanunjan Academy.</p>
+        </div>
+
+        <div class="gallery-grid">
+            <div class="gallery-item" onclick="abrirLightbox('sala.png', 'Formação Universitária')">
+                <div class="gallery-img-container">
+                    <img src="sala.png" alt="Professor a ensinar estudantes universitários">
+                </div>
+                <div class="gallery-content">
+                    <h3>Formação Universitária</h3>
+                    <p>Aulas dinâmicas focadas em matemática, tecnologia, empreendedorismo e desenvolvimento académico.</p>
+                </div>
+            </div>
+
+            <div class="gallery-item" onclick="abrirLightbox('laboratorio.png', 'Laboratórios Modernos')">
+                <div class="gallery-img-container">
+                    <img src="laboratorio.png" alt="Seminário académico">
+                </div>
+                <div class="gallery-content">
+                    <h3>Laboratórios Modernos</h3>
+                    <p>Sessões de investigação que promovem pensamento crítico, inovação e liderança.</p>
+                </div>
+            </div>
+
+            <div class="gallery-item" onclick="abrirLightbox('bibilioteca.png', 'Biblioteca da Academia')">
+                <div class="gallery-img-container">
+                    <img src="bibilioteca.png" alt="Biblioteca Ramanunjan Academy">
+                </div>
+                <div class="gallery-content">
+                    <h3>Biblioteca da Academia</h3>
+                    <p>Um ambiente moderno de estudo, investigação e desenvolvimento intelectual.</p>
+                </div>
+            </div>
+
+            <div class="gallery-item" onclick="abrirLightbox('eventos.png', 'Eventos Académicos')">
+                <div class="gallery-img-container">
+                    <img src="eventos.png" alt="Eventos académicos">
+                </div>
+                <div class="gallery-content">
+                    <h3>Eventos Académicos</h3>
+                    <p>Olimpíadas, palestras, workshops, conferências e cerimónias de graduação.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<div id="lightboxGaleria" class="lightbox" onclick="fecharLightbox()">
+    <span class="fechar-lightbox">&times;</span>
+    <img class="lightbox-img" id="imgLightbox" src="" alt="">
+    <div id="legendaLightbox" class="lightbox-caption"></div>
+</div>
+<!-- 6 secção da Área dos estudantes.OBS.: não desenvolvi esta secção, pois, o codigo já está um pouco estenso -->
+<section id="estudante">
+    <h2>Área do Estudante</h2>
+    <ul>
+        <li>Notas e avaliações</li>
+        <li>Horários das aulas</li>
+        <li>Material de apoio</li>
+        <li>Inscrição em disciplinas</li>
+    </ul>
+</section>
+<!-- 7. secção dos contactos -->
+<section id="contacto" class="contacto-section">
+    <h2>Contacto</h2>
+    
+    <div class="contacto-container">
+        <!-- Coluna da Esquerda: Informações Úteis -->
+        <div class="contacto-info">
+            <h3>Fale Connosco</h3>
+            <p>Tem alguma dúvida sobre as inscrições, bolsas ou cursos? A nossa equipa está pronta para ajudar.</p>
+            
+            <div class="info-items">
+                <div class="info-item">
+                    <span class="info-icon">📍</span>
+                    <div class="info-text">
+                        <strong>Localização</strong>
+                        <span>Namibe, Angola</span>
+                    </div>
+                </div>
+                
+                <div class="info-item">
+                    <span class="info-icon">📞</span>
+                    <div class="info-text">
+                        <strong>Telefone</strong>
+                        <span><a href="tel:+244941723925">+244941723925</a></span>
+                    </div>
+                </div>
+                
+                <div class="info-item">
+                    <span class="info-icon">✉️</span>
+                    <div class="info-text">
+                        <strong>E-mail</strong>
+                        <span><a href="mailto:RamanunjanAcademy26@gmail.com">RamanjAcademy26@gmail.com</a></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Coluna da Direita: Formulário Moderno -->
+        <div class="contacto-form-wrapper">
+            <h3>Envie uma Mensagem</h3>
+            <form class="form-moderno" onsubmit="event.preventDefault(); alert('Mensagem enviada com sucesso!');">
+                <div class="input-group">
+                    <input type="text" id="nome" required placeholder=" ">
+                    <label for="nome">Seu nome</label>
+                </div>
+                
+                <div class="input-group">
+                    <input type="email" id="email" required placeholder=" ">
+                    <label for="email">Seu e-mail</label>
+                </div>
+                
+                <div class="input-group">
+                    <textarea id="mensagem" rows="4" required placeholder=" "></textarea>
+                    <label for="mensagem">Sua mensagem</label>
+                </div>
+                
+                <button type="submit" class="btn-enviar">
+                    <span>Enviar Mensagem</span>
+                    <span class="btn-icon">→</span>
+                </button>
+            </form>
+        </div>
+    </div>
+</section>
+
+
+<!-- 8. Janela Modal dos Cursos -->
+<div id="modalCurso" class="modal">
+    <div class="modal-content">
+       <span class="fechar" onclick="fecharCurso()">&times;</span>
+        <h2 id="tituloCurso"></h2>
+        <p id="descricaoCurso"></p>
+        <p><strong>Importância:</strong></p>
+        <p id="importanciaCurso"></p>
+        <p><strong>Programa:</strong></p>
+        <ul id="programaCurso"></ul>
+        <p><strong>Custo:</strong></p>
+        <p id="custoCurso"></p>
+
+    </div>
+</div>
+<!-- 9. Rodapé com Redesign Completo -->
+<footer class="footer-moderno">
+    <div class="footer-container">
+        
+        <!-- Coluna 1: Sobre a Academia -->
+        <div class="footer-col">
+            <div class="footer-logo">
+                <h3>RAMANUNJAN</h3>
+                <span>ACADEMY</span>
+            </div>
+            <p class="footer-desc">
+                Promovendo a excelência académica, inovação tecnológica e o desenvolvimento científico a partir de Namibe para o mundo.
+            </p>
+            <div class="footer-sociais">
+                <a href="#" aria-label="Facebook">🌐</a>
+                <a href="#" aria-label="LinkedIn">💼</a>
+                <a href="#" aria-label="YouTube">📺</a>
+                <a href="#" aria-label="GitHub">💻</a>
+            </div>
+        </div>
+
+        <!-- Coluna 2: Links Rápidos -->
+        <div class="footer-col">
+            <h4>Acesso Rápido</h4>
+            <ul class="footer-links">
+                <li><a href="#sobre">Sobre Nós</a></li>
+                <li><a href="#cursos">Cursos Disponíveis</a></li>
+                <li><a href="#galeria">Galeria de Espaços</a></li>
+                <li><a href="#estudante">Área do Estudante</a></li>
+                <li><a href="#contacto">Contactos</a></li>
+            </ul>
+        </div>
+
+        <!-- Coluna 3: Nossos Cursos -->
+        <div class="footer-col">
+            <h4>Licenciaturas</h4>
+            <ul class="footer-links">
+                <li><a href="#cursos" onclick="abrirCurso('matematica')">Matemática</a></li>
+                <li><a href="#cursos" onclick="abrirCurso('informatica')">Informática</a></li>
+                <li><a href="#cursos" onclick="abrirCurso('gestao')">Gestão de Empresas</a></li>
+                <li><a href="#cursos" onclick="abrirCurso('educacao')">Ciências da Educação</a></li>
+            </ul>
+        </div>
+
+        <!-- Coluna 4: Horário e Atendimento -->
+        <div class="footer-col">
+            <h4>Secretaria Geral</h4>
+            <p class="footer-info-text">
+                🕒 <strong>Segunda a Sexta:</strong><br>
+                08:00h às 12:00h — 14:00h às 18:00h
+            </p>
+            <p class="footer-info-text">
+                📍 Moçâmedes, Namibe - Angola
+            </p>
+        </div>
+
+    </div>
+
+    <!-- Barra Inferior de Direitos de Autor -->
+    <div class="footer-bottom">
+        <div class="footer-bottom-content">
+            <p>© 2026 Ramanunjan Academy. Todos os direitos reservados.</p>
+            <p>Desenvolvido com excelência por <strong>João V. J. Gravino</strong></p>
+            <p class="footer-update">Última atualização: Julho de 2026</p>
+        </div>
+    </div>
+</footer>
+
+<!--Botão Voltar ao Topo -->
+<button id="btnTopo" class="btn-topo" aria-label="Voltar ao topo">↑</button>
+
+<script src="script.js"></script>
+</body>
+</html>
